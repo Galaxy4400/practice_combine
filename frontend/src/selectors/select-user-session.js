@@ -1,0 +1,1 @@
+export const selecthash = ({ user }) => user.session;

@@ -1,0 +1,44 @@
+.modal {
+	--transition-time: 0.3s;
+
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1000;
+	background-color: rgba(0,0,0, 0.5);
+	cursor: pointer;
+	overflow-y: auto;
+	overflow-x: hidden;
+	text-align: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity var(--transition-time), visibility var(--transition-time);
+
+	&:global(.active) {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.container {
+	position: relative;
+	max-width: 900px;
+	margin: 50px auto;
+	padding: 30px 50px;
+	vertical-align: middle;
+	background-color: #fff;
+	border-radius: 5px;
+	cursor: default;
+	text-align: left;
+}
+
+.close {
+	display: inline-flex;
+	padding: 10px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+}
